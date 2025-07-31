@@ -67,8 +67,8 @@ function ChatWindow() {
           </div>
         </div>
         <Chatcomponent />
+
         <ScaleLoader color="#ffffff80" loading={load} className=" d-flex justify-content-center " />
-        {/* <ScaleLoader color="#ffffff80" className=" d-flex justify-content-center " /> */}
 
         <div className="inputfields">
           <div className="one">

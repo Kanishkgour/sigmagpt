@@ -16,7 +16,7 @@ const getOpenAIAPIResponse = async (message) => {
         },
         body: JSON.stringify({
             model: "gemini-2.5-flash",
-            // reasoning_effort: "low",
+
             messages: [
                 { role: "system", content: "You are a helpful assistant." },
                 {
@@ -35,13 +35,11 @@ const getOpenAIAPIResponse = async (message) => {
                 { role: "system", content: "You are a helpful assistant." },
                 {
                     role: "user",
-                    // content: "who are you",
                     content:message,
                 },
             ],
         });
         return (response.choices[0].message.content);
-        console.log(response.choices[0].message.content);
 
     } catch (err) {
         console.log("Error: ", err);
