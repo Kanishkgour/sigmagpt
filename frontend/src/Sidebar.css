@@ -1,0 +1,140 @@
+section {
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.sidebarTopButton {
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  margin: 0;
+  padding: 10px;
+  border: 0.2px solid transparent;
+  border-radius: 50px;
+}
+
+.sidebarTopButton i {
+  color: #fcfcfc;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebarTopButton:hover {
+  transition-duration: 0.25s;
+  /* background-color: rgba(180, 180, 180, 0.07); */
+}
+.openaiButton {
+    background-color: inherit;
+    border: none;
+    border-radius: 50%;
+}
+.openaiButton:hover{
+  background-color: rgba(180, 180, 180, 0.07);
+}
+.modelLabel {
+  font-size: 0.8rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.modelLabel li {
+  list-style: none;
+  color: #fcfcfc;
+}
+
+.thread {
+  margin: 0;
+  padding: 12px 8px;
+  height: 100%;
+  width: 95%;
+  font-size: 14px;
+  /*  */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  gap: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+}
+
+/* Webkit scrollbar for Chrome/Edge/Safari */
+.thread::-webkit-scrollbar {
+  width: 6px;
+}
+.thread::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+.thread::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thread li {
+  width: 100%;
+  padding: 6px 12px;
+  list-style: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.thread li:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: scale(1.02);
+  border: 1px solid rgba(180, 180, 180, 0.15);
+}
+
+.signs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-top: 0.2px solid #fcfcfc;
+  padding: 15px 0px;
+  align-items: center;
+  font-size: 15px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+.signs p {
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+  color: #aaa;
+}
+
+.fa-trash{
+  opacity: 0;
+  position: absolute;
+  right: 0;
+}
+
+.thread li:hover .fa-trash{
+  opacity: 1;
+}
+.fa-trash:hover{
+  color: red;
+}
+.highlighted{
+  background-color: rgba(255, 255, 255, 0.171) !important;
+  /* border-radius: 20px; */
+  border: 1px solid cadetblue !important;
+}

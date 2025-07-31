@@ -1,0 +1,124 @@
+.chatWindow {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #292929fc;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.left-Section {
+  font-size: 14px;
+}
+.left-Section span button {
+  font-size: 14px;
+  width: 140px;
+  height: 25px;
+  text-decoration: none;
+  background-color: #292929fc;
+  border: none;
+  color: #fcfcfc;
+}
+
+.right-section {
+  display: flex;
+  justify-content: end;
+}
+
+.right-section li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 18px;
+}
+
+i.fa-solid.fa-user.userProfile {
+  background-color: blue;
+  background-color: dimgrey;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.inputfields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+/* .one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.inputfields .one input {
+  width: 60%;
+  height: 60px;
+  border: none;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+} */
+
+.inputfields p {
+  margin: 20px 0px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.one {
+  width: 70%;
+  padding: 12px;
+  display: flex;
+  border: none;
+  /* background-color: #2f2f2f; */
+  /* border: 0px solid #ddd; */
+  /* border-radius: 20px; */
+  /* box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05); */
+}
+
+.one form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.one input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  background-color: #2f2f2f;
+  outline: none;
+  border: none;
+  height: 50px;
+  /* border: 1px solid #ccc; */
+
+  transition: border-color 0.3s ease;
+}
+
+.one button {
+  padding: 8px 12px;
+  border: none;
+  /* background-color: #212121c2; */
+  background-color: inherit;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.one button:hover {
+  /* background-color: #357abd; */
+  transform: scale(1.1);
+}
