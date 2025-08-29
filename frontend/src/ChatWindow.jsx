@@ -26,8 +26,12 @@ function ChatWindow() {
     };
 
     try {
-      const response = await fetch("https://back-crcy.onrender.com/api/chat", options);
-      const res = await response.json();
+      // const response = await fetch("https://back-crcy.onrender.com/api/chat", options);
+      // const res = await response.json();
+
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+      const res = await fetch(`${API_URL}/api/chat`, options);
+      
       console.log("response : ", res);
       setReply(res.reply);
     } catch (error) {
