@@ -4,20 +4,20 @@ import Thread from '../models/Thread.js';
 import getOpenAIAPIResponse from "../utils/openai.js"
 
 
-router.post("/test", async (req, res) => {
-    try {
-        const thread = new Thread({
-            threadId: "abc+",
-            title: "Testing seconds Thread"
-        })
-        const response = await thread.save();
-        res.send(response);
-    }
-    catch (err) {
-        console.log(err);
-        res.status(500).json({ error: "Failed to connect" });
-    }
-})
+// router.post("/test", async (req, res) => {
+//     try {
+//         const thread = new Thread({
+//             threadId: "abc+",
+//             title: "Testing seconds Thread"
+//         })
+//         const response = await thread.save();
+//         res.send(response);
+//     }
+//     catch (err) {
+//         console.log(err);
+//         res.status(500).json({ error: "Failed to connect" });
+//     }
+// })
 
 // Get all Threads
 router.get("/thread", async (req, res) => {
