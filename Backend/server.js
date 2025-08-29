@@ -22,7 +22,7 @@ const connectDB = async () => {
         console.log("Error to connect: ", err)
     }
 }
-app.use("/api", chatRoutes);
+app.use("https://back-crcy.onrender.com/api", chatRoutes);
 
 app.listen(PORT, () => {
     console.log(`On Port ${PORT} Gemini Listening...`)
