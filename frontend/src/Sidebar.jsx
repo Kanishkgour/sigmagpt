@@ -19,10 +19,10 @@ function Sidebar() {
   } = useContext(MyContext);
 
   const [currChatId, setCurrChatId] = useState("");
-
+  const apiUrl = import.meta.env.REACT_APP_API_URL;
   const getAllThreads = async () => {
     try {
-      const response = await fetch("https://back-crcy.onrender.com/api/thread");
+      const response = await fetch(`${apiUrl}/api/thread`);
       const result = await response.json();
       const filterData = result.map((thread) => ({
         threadId: thread.threadId,
@@ -50,7 +50,7 @@ function Sidebar() {
 
   const changeThread = async (threadId) => {
     try {
-      const response = await fetch(`https://back-crcy.onrender.com/api/thread/${threadId}`);
+      const response = await fetch(`${apiUrl}/api/thread/${threadId}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -66,7 +66,7 @@ function Sidebar() {
 
   const DelThread = async (threadId) => {
     try {
-      const response = await fetch(`https://back-crcy.onrender.com/api/thread/${threadId}`, { method: "DELETE" });
+      const response = await fetch(`${apiUrl}/api/thread/${threadId}`, { method: "DELETE" });
       const res = await response.json();
       console.log(res);
       setAllThreads((prev) => prev.filter((thread) => thread.threadId !== threadId));
