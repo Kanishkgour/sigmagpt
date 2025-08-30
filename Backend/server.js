@@ -5,7 +5,7 @@ import cors from 'cors';
 import mongoose from "mongoose";
 import chatRoutes from "./routes/chat.js";
 
-dotenv.config();
+dotenv.config({ override: true });
 
 const app = express();
 const PORT = process.env.PORT || 8080;
